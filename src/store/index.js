@@ -16,15 +16,15 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    SET_LOADING_TRUE (state) {
+    SET_LOADING_TRUE(state) {
       state.loadingTimes += 1
       state.loading = true
     },
-    SET_LOADING_FALSE (state) {
+    SET_LOADING_FALSE(state) {
       if (state.loadingTimes === 1) {
         state.loadingTimes -= 1
         state.loading = false
-      } else {
+      } else if (state.loadingTimes > 0) {
         state.loadingTimes -= 1
       }
     }

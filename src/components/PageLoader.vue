@@ -70,7 +70,7 @@ export default {
 }
 #my-svg-1 {
   z-index: 3;
-  width: 100px;
+  width: 150px;
   overflow: visible;
 }
 </style>

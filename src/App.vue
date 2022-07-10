@@ -1,8 +1,12 @@
 <template>
   <v-app dark :style="{ background: $vuetify.theme.themes[theme].background }">
+    <!-- PageLoader -->
     <transition name="custom-fade" mode="out-in">
       <c-page-loader v-if="isLoading"></c-page-loader>
     </transition>
+    <!-- PageLoader end -->
+
+    <!-- Navbar -->
     <v-app-bar app id="appBarMain" class="darkLight">
       <v-container>
         <v-row class="mx-0 my-0">
@@ -48,17 +52,22 @@
                 </template>
 
                 <v-list class="darkLight">
-                  <v-list-item v-for="(item, index) in portfolioMenu" :key="index">
-                    <v-btn
-                    :href="item.link"
-                    text
-                    class="darkText--text"
-                    v-bind="attrs"
-                    v-on="on"
+                  <v-list-item
+                    v-for="(item, index) in portfolioMenu"
+                    :key="index"
                   >
-                    <span><i class="fa-solid" :class="'fa-' + item.icon"></i></span>
-                    <span class="ml-2">{{ item.title }}</span>
-                  </v-btn>
+                    <v-btn
+                      :href="item.link"
+                      text
+                      class="darkText--text"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      <span
+                        ><i class="fa-solid" :class="'fa-' + item.icon"></i
+                      ></span>
+                      <span class="ml-2">{{ item.title }}</span>
+                    </v-btn>
                   </v-list-item>
                 </v-list>
               </v-menu>
@@ -89,28 +98,65 @@
       </v-container>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" fixed bottom temporary>
-      <v-list nav dense>
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
+    <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      bottom
+      temporary
+      class="darkLight"
+    >
+      <v-list nav>
+        <v-list-item-group v-model="activeItem">
+          <v-list-item href="#about" @click="toggleDrawer()">
             <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
+              <v-icon class="darkText--text">mdi-account</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title class="darkText--text">About</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
+          <v-list-item
+            v-for="(item, index) in portfolioMenu"
+            :key="index"
+            :href="item.link"
+            @click="toggleDrawer()"
+          >
             <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
+              <v-icon class="darkText--text" v-text="item.mobIcon"></v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
+            <v-list-item-title
+              class="darkText--text"
+              v-text="item.title"
+            ></v-list-item-title>
+          </v-list-item>
+
+          <v-list-item href="#contact" @click="toggleDrawer()">
+            <v-list-item-icon>
+              <v-icon class="darkText--text">mdi-phone</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title class="darkText--text"
+              >Contact</v-list-item-title
+            >
+          </v-list-item>
+
+          <v-list-item @click="toggleDarkMode()">
+            <v-list-item-icon class="darkText--text">
+              <transition name="slide-fade" mode="out-in">
+                <span v-if="darkMode" key="1"
+                  ><i class="fa-solid fa-xl fa-sun"></i
+                ></span>
+                <span v-else key="2"
+                  ><i class="fa-solid fa-xl fa-moon"></i
+                ></span>
+              </transition>
+            </v-list-item-icon>
+            <v-list-item-title class="darkText--text"
+              >Switch to {{ themeOpposite }} mode</v-list-item-title
+            >
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+    <!-- Navbar end -->
 
     <v-main>
       <HelloWorld data-aos="fade-up-right" />
@@ -140,7 +186,7 @@ import Achievements from "./components/Achievements.vue";
 import Education from "./components/Education.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
-import PageLoader from "./components/PageLoader.vue"
+import PageLoader from "./components/PageLoader.vue";
 import Vivus from "vivus";
 import { mapGetters } from "vuex";
 
@@ -163,20 +209,41 @@ export default {
     cEducation: Education,
     cContact: Contact,
     cFooter: Footer,
-    cPageLoader: PageLoader
+    cPageLoader: PageLoader,
   },
 
   data: () => ({
     drawer: false,
     vivus: null,
     portfolioMenu: [
-      {link: "#portfolio", title: "Work Experience", icon: "briefcase"},
-      {link: "#education", title: "Education", icon: "graduation-cap"},
-      {link: "#projects", title: "Projects", icon: "gears"},
-      {link: "#achievements", title: "Achievements", icon: "trophy"}
+      {
+        link: "#portfolio",
+        title: "Work Experience",
+        icon: "briefcase",
+        mobIcon: "mdi-briefcase",
+      },
+      {
+        link: "#education",
+        title: "Education",
+        icon: "graduation-cap",
+        mobIcon: "mdi-school",
+      },
+      {
+        link: "#projects",
+        title: "Projects",
+        icon: "gears",
+        mobIcon: "mdi-cogs",
+      },
+      {
+        link: "#achievements",
+        title: "Achievements",
+        icon: "trophy",
+        mobIcon: "mdi-trophy",
+      },
     ],
     on: null,
-    attrs: null
+    attrs: null,
+    activeItem: null,
   }),
 
   computed: {
@@ -186,14 +253,21 @@ export default {
     theme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
+    themeOpposite() {
+      return this.$vuetify.theme.dark ? "light" : "dark";
+    },
     ...mapGetters({
-      isLoading: 'isLoading'
-    })
+      isLoading: "isLoading",
+    }),
   },
 
   methods: {
     toggleDarkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      this.drawer = false;
+    },
+    toggleDrawer() {
+      this.drawer = !this.drawer;
     },
   },
 };

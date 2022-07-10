@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless elevation="5" style="margin-top: 5rem;">
+  <v-footer padless elevation="5" style="margin-top: 5rem">
     <v-card flat tile class="text-center darkLight" width="100%">
       <v-divider></v-divider>
       <v-card-text>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "c-footer"
+  name: "c-footer",
 };
 </script>
 

@@ -84,8 +84,8 @@ export default {
     };
   },
   created() {
-    this.setLoadingTrue()
-    this.getExperienceList()
+    this.setLoadingTrue();
+    this.getExperienceList();
   },
   methods: {
     ...mapActions({
@@ -99,13 +99,13 @@ export default {
           if (a.id > b.id) return -1;
           return 0;
         });
-        this.setLoadingFalse()
+        this.setLoadingFalse();
       });
     },
     ...mapMutations({
       setLoadingTrue: "SET_LOADING_TRUE",
-      setLoadingFalse: "SET_LOADING_FALSE"
-    })
+      setLoadingFalse: "SET_LOADING_FALSE",
+    }),
   },
 };
 </script>

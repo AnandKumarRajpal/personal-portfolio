@@ -26,7 +26,12 @@
         </v-row>
         <v-row class="mx-0 my-0">
           <v-col class="text-center">
-            <v-btn class="darkText--text mt-4" outlined href="https://github.com/AnandKumarRajpal" target="_blank">
+            <v-btn
+              class="darkText--text mt-4"
+              outlined
+              href="https://github.com/AnandKumarRajpal"
+              target="_blank"
+            >
               <v-icon class="mr-2">mdi-github</v-icon>
               View More
             </v-btn>
@@ -48,7 +53,7 @@ export default {
     cProjectCard: ProjectCard,
   },
   created() {
-    this.setLoadingTrue()
+    this.setLoadingTrue();
     this.getProjectsList();
   },
   data() {
@@ -78,13 +83,13 @@ export default {
     getProjectsList() {
       this.getProjects().then((response) => {
         this.projectsList = response;
-        this.setLoadingFalse()
+        this.setLoadingFalse();
       });
     },
     ...mapMutations({
       setLoadingTrue: "SET_LOADING_TRUE",
-      setLoadingFalse: "SET_LOADING_FALSE"
-    })
+      setLoadingFalse: "SET_LOADING_FALSE",
+    }),
   },
 };
 </script>
