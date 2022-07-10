@@ -12,6 +12,9 @@ new Vue({
   store,
   render: h => h(App),
   mounted() {
-    AOS.init()
+    AOS.init({
+      duration: 1000,
+      once: true
+    })
   }
 }).$mount('#app')
