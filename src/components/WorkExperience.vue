@@ -74,6 +74,7 @@
 
 <script>
 import { mapActions } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   name: "c-work-experiences",
@@ -83,7 +84,8 @@ export default {
     };
   },
   created() {
-    this.getExperienceList();
+    this.setLoadingTrue()
+    this.getExperienceList()
   },
   methods: {
     ...mapActions({
@@ -97,8 +99,13 @@ export default {
           if (a.id > b.id) return -1;
           return 0;
         });
+        this.setLoadingFalse()
       });
     },
+    ...mapMutations({
+      setLoadingTrue: "SET_LOADING_TRUE",
+      setLoadingFalse: "SET_LOADING_FALSE"
+    })
   },
 };
 </script>

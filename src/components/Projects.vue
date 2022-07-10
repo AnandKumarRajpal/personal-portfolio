@@ -39,6 +39,7 @@
 
 <script>
 import { mapActions } from "vuex";
+import { mapMutations } from "vuex";
 import ProjectCard from "./ProjectCard.vue";
 
 export default {
@@ -47,7 +48,7 @@ export default {
     cProjectCard: ProjectCard,
   },
   created() {
-    // this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+    this.setLoadingTrue()
     this.getProjectsList();
   },
   data() {
@@ -77,8 +78,13 @@ export default {
     getProjectsList() {
       this.getProjects().then((response) => {
         this.projectsList = response;
+        this.setLoadingFalse()
       });
     },
+    ...mapMutations({
+      setLoadingTrue: "SET_LOADING_TRUE",
+      setLoadingFalse: "SET_LOADING_FALSE"
+    })
   },
 };
 </script>

@@ -1,5 +1,8 @@
 <template>
   <v-app dark :style="{ background: $vuetify.theme.themes[theme].background }">
+    <transition name="custom-fade" mode="out-in">
+      <c-page-loader v-if="isLoading"></c-page-loader>
+    </transition>
     <v-app-bar app id="appBarMain" class="darkLight">
       <v-container>
         <v-row class="mx-0 my-0">
@@ -23,7 +26,7 @@
 
           <v-spacer></v-spacer>
 
-          <div class="d-none d-lg-flex align-center">
+          <div class="d-none d-md-flex align-center">
             <v-btn href="#about" text class="darkText--text">
               <span><i class="fa-solid fa-user"></i></span>
               <span class="ml-2">About</span>
@@ -79,7 +82,7 @@
           </div>
 
           <v-app-bar-nav-icon
-            class="d-flex d-md-flex d-lg-none darkText--text"
+            class="d-flex d-sm-flex d-md-none darkText--text"
             @click="drawer = !drawer"
           ></v-app-bar-nav-icon>
         </v-row>
@@ -137,7 +140,9 @@ import Achievements from "./components/Achievements.vue";
 import Education from "./components/Education.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import PageLoader from "./components/PageLoader.vue"
 import Vivus from "vivus";
+import { mapGetters } from "vuex";
 
 export default {
   name: "App",
@@ -158,6 +163,7 @@ export default {
     cEducation: Education,
     cContact: Contact,
     cFooter: Footer,
+    cPageLoader: PageLoader
   },
 
   data: () => ({
@@ -180,6 +186,9 @@ export default {
     theme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
     },
+    ...mapGetters({
+      isLoading: 'isLoading'
+    })
   },
 
   methods: {
@@ -230,6 +239,15 @@ export default {
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
+  opacity: 0;
+}
+
+.custom-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.custom-fade-enter, .custom-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-50px);
   opacity: 0;
 }
 </style>

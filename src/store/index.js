@@ -7,14 +7,27 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    darkMode: true
+    loadingTimes: 0,
+    loading: false
   },
   getters: {
-    getDarkModeStatus(state) {
-      return state.darkMode
+    isLoading(state) {
+      return state.loading
     }
   },
   mutations: {
+    SET_LOADING_TRUE (state) {
+      state.loadingTimes += 1
+      state.loading = true
+    },
+    SET_LOADING_FALSE (state) {
+      if (state.loadingTimes === 1) {
+        state.loadingTimes -= 1
+        state.loading = false
+      } else {
+        state.loadingTimes -= 1
+      }
+    }
   },
   actions: {
     async getProjects() {
