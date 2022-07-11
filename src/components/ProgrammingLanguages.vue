@@ -116,7 +116,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .pro-lang {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
@@ -125,5 +125,8 @@ export default {
 .pro-lang:hover {
   filter: none;
   -webkit-filter: grayscale(0);
+}
+.v-divider--vertical {
+  border-width: 0 5px 0 0 !important;
 }
 </style>
