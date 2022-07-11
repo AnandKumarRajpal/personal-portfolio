@@ -78,7 +78,12 @@
               <span class="ml-2">Contact</span>
             </v-btn>
 
-            <v-btn href="/AnandKumar-Resume.pdf" target="_blank" class="darkText--text" text>
+            <v-btn
+              href="/AnandKumar-Resume.pdf"
+              target="_blank"
+              class="darkText--text"
+              text
+            >
               <span><i class="fa-solid fa-file"></i></span>
               <span class="ml-2">Resume</span>
             </v-btn>
@@ -172,11 +177,8 @@
       ></c-work-experience>
       <c-education data-aos="fade-up-left" data-aos-offset="250"></c-education>
       <c-projects data-aos="fade-up-right" data-aos-offset="250"></c-projects>
-      <c-achievements
-        data-aos="fade-up-left"
-        data-aos-offset="250"
-      ></c-achievements>
-      <c-contact></c-contact>
+      <c-achievements></c-achievements>
+      <c-contact data-aos="fade-up-left" data-aos-offset="250"></c-contact>
       <c-footer></c-footer>
     </v-main>
   </v-app>
@@ -328,5 +330,11 @@ export default {
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateY(-50px);
   opacity: 0;
+}
+body {
+  overflow-x: hidden;
+}
+.aos-init:not(.aos-animate):after {
+  position: fixed;
 }
 </style>
