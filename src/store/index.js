@@ -8,7 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     loadingTimes: 0,
-    loading: false
+    loading: true
   },
   getters: {
     isLoading(state) {
