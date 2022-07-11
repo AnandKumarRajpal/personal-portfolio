@@ -15,7 +15,7 @@
             :href="iconLink[index]"
             target="_blank"
           >
-            <v-icon size="42px" class="darkText--text">
+            <v-icon size="42px">
               {{ icon }}
             </v-icon>
           </v-btn>

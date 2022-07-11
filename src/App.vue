@@ -20,7 +20,7 @@
               >
                 <path
                   d="M50.1263 6.95198L93.3263 103H71.8703L55.7423 67.72H55.8863L47.9663 50.152L40.0463 67.72L49.2623 87.88H30.9743L30.6863 88.6L24.0623 103H2.60626L45.8063 6.95198L47.8223 2.19998L50.1263 6.95198Z"
-                  :stroke="this.$vuetify.theme.dark ? '#64ffda' : 'black'"
+                  :stroke="this.$vuetify.theme.dark ? 'white' : 'black'"
                   stroke-width="5"
                   stroke-linejoin="round"
                 />
@@ -31,7 +31,7 @@
           <v-spacer></v-spacer>
 
           <div class="d-none d-md-flex align-center">
-            <v-btn href="#about" text class="darkText--text">
+            <v-btn href="#about" text>
               <span><i class="fa-solid fa-user"></i></span>
               <span class="ml-2">About</span>
             </v-btn>
@@ -42,7 +42,6 @@
                   <v-btn
                     href="#portfolio"
                     text
-                    class="darkText--text"
                     v-bind="attrs"
                     v-on="on"
                   >
@@ -59,7 +58,6 @@
                     <v-btn
                       :href="item.link"
                       text
-                      class="darkText--text"
                       v-bind="attrs"
                       v-on="on"
                     >
@@ -73,7 +71,7 @@
               </v-menu>
             </div>
 
-            <v-btn href="#contact" text class="darkText--text">
+            <v-btn href="#contact" text>
               <span><i class="fa-solid fa-phone"></i></span>
               <span class="ml-2">Contact</span>
             </v-btn>
@@ -81,14 +79,13 @@
             <v-btn
               href="/AnandKumar-Resume.pdf"
               target="_blank"
-              class="darkText--text"
               text
             >
               <span><i class="fa-solid fa-file"></i></span>
               <span class="ml-2">Resume</span>
             </v-btn>
 
-            <v-btn icon @click="toggleDarkMode()" class="darkText--text">
+            <v-btn icon @click="toggleDarkMode()">
               <transition name="slide-fade" mode="out-in">
                 <span v-if="darkMode" key="1"
                   ><i class="fa-solid fa-xl fa-sun"></i
@@ -101,7 +98,7 @@
           </div>
 
           <v-app-bar-nav-icon
-            class="d-flex d-sm-flex d-md-none darkText--text"
+            class="d-flex d-sm-flex d-md-none"
             @click="drawer = !drawer"
           ></v-app-bar-nav-icon>
         </v-row>
@@ -119,9 +116,9 @@
         <v-list-item-group v-model="activeItem">
           <v-list-item href="#about" @click="toggleDrawer()">
             <v-list-item-icon>
-              <v-icon class="darkText--text">mdi-account</v-icon>
+              <v-icon>mdi-account</v-icon>
             </v-list-item-icon>
-            <v-list-item-title class="darkText--text">About</v-list-item-title>
+            <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
           <v-list-item
@@ -131,25 +128,24 @@
             @click="toggleDrawer()"
           >
             <v-list-item-icon>
-              <v-icon class="darkText--text" v-text="item.mobIcon"></v-icon>
+              <v-icon v-text="item.mobIcon"></v-icon>
             </v-list-item-icon>
             <v-list-item-title
-              class="darkText--text"
               v-text="item.title"
             ></v-list-item-title>
           </v-list-item>
 
           <v-list-item href="#contact" @click="toggleDrawer()">
             <v-list-item-icon>
-              <v-icon class="darkText--text">mdi-phone</v-icon>
+              <v-icon>mdi-phone</v-icon>
             </v-list-item-icon>
-            <v-list-item-title class="darkText--text"
+            <v-list-item-title
               >Contact</v-list-item-title
             >
           </v-list-item>
 
           <v-list-item @click="toggleDarkMode()">
-            <v-list-item-icon class="darkText--text">
+            <v-list-item-icon>
               <transition name="slide-fade" mode="out-in">
                 <span v-if="darkMode" key="1"
                   ><i class="fa-solid fa-xl fa-sun"></i
@@ -159,7 +155,7 @@
                 ></span>
               </transition>
             </v-list-item-icon>
-            <v-list-item-title class="darkText--text"
+            <v-list-item-title
               >Switch to {{ themeOpposite }} mode</v-list-item-title
             >
           </v-list-item>
@@ -194,16 +190,12 @@ import Education from "./components/Education.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 import PageLoader from "./components/PageLoader.vue";
-import Vivus from "vivus";
 import { mapGetters } from "vuex";
 
 export default {
   name: "App",
 
   mounted() {
-    this.vivus = new Vivus("my-svg", {
-      duration: 100,
-    });
     this.$vuetify.theme.dark = true;
   },
 
