@@ -42,6 +42,12 @@ export default new Vuex.Store({
       const experienceList = experienceSnapshot.docs.map((doc) => doc.data());
       return experienceList
     },
+    async getAchievements() {
+      const achievementsCol = collection(db, "achievements");
+      const achievementsSnapshot = await getDocs(achievementsCol);
+      const achievementsList = achievementsSnapshot.docs.map((doc) => doc.data());
+      return achievementsList
+    },
   },
   modules: {
   }
