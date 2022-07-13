@@ -3,7 +3,7 @@
     width="350"
     elevation="5"
     min-height="350"
-    class="my-4 mx-2 rounded-lg d-flex flex-column darkLight"
+    class="my-4 mx-2 rounded-lg d-flex flex-column"
     rounded
   >
     <div class="d-flex align-center justify-center">

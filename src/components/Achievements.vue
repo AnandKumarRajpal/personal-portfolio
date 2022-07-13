@@ -16,6 +16,7 @@
             lg="4"
           >
             <c-achievement-card
+              class="mx-auto darkLight"
               :title="item.title"
               :description="item.description"
               :linkTitle="item.linkTitle"
@@ -64,9 +65,9 @@ export default {
   },
   computed: {
     achievements() {
-      return this.achievementsList.slice().reverse()
-    }
-  }
+      return this.achievementsList.slice().reverse();
+    },
+  },
 };
 </script>
 
