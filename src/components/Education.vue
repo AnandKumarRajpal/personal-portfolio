@@ -6,7 +6,8 @@
           <p class="code-style darkText--text my-0">02.02 - Education</p>
           <v-divider class="ml-4"></v-divider>
         </v-row>
-        <v-tabs
+        <v-card elevation="10">
+          <v-tabs
           :vertical="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
           background-color="darkLight"
         >
@@ -51,6 +52,7 @@
             </v-card>
           </v-tab-item>
         </v-tabs>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
