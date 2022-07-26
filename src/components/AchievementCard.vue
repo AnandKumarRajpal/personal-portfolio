@@ -7,7 +7,7 @@
     rounded
   >
     <div class="d-flex align-center justify-center">
-      <img :src="require('@/' + iconLink)" height="100" alt="" class="my-4" />
+      <img :src="require('@/' + iconLink)" height="100" alt="" class="my-4" :style="noFilter ? '' : $vuetify.theme.dark ? '' : 'filter: invert(1);'" />
     </div>
     <v-card-title style="word-break: break-word">{{ title }}</v-card-title>
     <v-card-text
@@ -32,7 +32,11 @@ export default {
       link: String,
       description: String,
       iconLink: String,
-      linkTitle: String
+      linkTitle: String,
+      noFilter: {
+        type: Boolean,
+        default: false
+      }
     },
 };
 </script>

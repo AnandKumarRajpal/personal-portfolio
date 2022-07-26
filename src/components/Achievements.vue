@@ -6,7 +6,7 @@
           <p class="code-style darkText--text my-0">02.04 - Achievements</p>
           <v-divider class="ml-4"></v-divider>
         </v-row>
-        <v-row class="mx-0 my-0 align-center justify-center">
+        <v-row class="mx-0 my-0">
           <v-col
             :key="item.id"
             v-for="item in achievements"
@@ -22,6 +22,7 @@
               :linkTitle="item.linkTitle"
               :link="item.link"
               :iconLink="item.iconLink"
+              :noFilter="item.noFilter"
             ></c-achievement-card>
           </v-col>
         </v-row>

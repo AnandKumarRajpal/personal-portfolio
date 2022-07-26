@@ -1,5 +1,9 @@
 <template>
-  <v-app dark :style="{ background: $vuetify.theme.themes[theme].background }">
+  <v-app
+    dark
+    class="c-bg"
+    :class="this.$vuetify.theme.dark ? 'c-bg-dark' : 'c-bg-light'"
+  >
     <!-- PageLoader -->
     <transition name="custom-fade" mode="out-in">
       <c-page-loader v-if="isLoading"></c-page-loader>
@@ -39,12 +43,7 @@
             <div class="text-center">
               <v-menu open-on-hover offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn
-                    href="#portfolio"
-                    text
-                    v-bind="attrs"
-                    v-on="on"
-                  >
+                  <v-btn href="#portfolio" text v-bind="attrs" v-on="on">
                     <span><i class="fa-solid fa-folder-closed"></i></span>
                     <span class="ml-2">Portfolio</span>
                   </v-btn>
@@ -55,12 +54,7 @@
                     v-for="(item, index) in portfolioMenu"
                     :key="index"
                   >
-                    <v-btn
-                      :href="item.link"
-                      text
-                      v-bind="attrs"
-                      v-on="on"
-                    >
+                    <v-btn :href="item.link" text v-bind="attrs" v-on="on">
                       <span
                         ><i class="fa-solid" :class="'fa-' + item.icon"></i
                       ></span>
@@ -76,11 +70,7 @@
               <span class="ml-2">Contact</span>
             </v-btn>
 
-            <v-btn
-              href="/AnandKumar-Resume.pdf"
-              target="_blank"
-              text
-            >
+            <v-btn href="/AnandKumar-Resume.pdf" target="_blank" text>
               <span><i class="fa-solid fa-file"></i></span>
               <span class="ml-2">Resume</span>
             </v-btn>
@@ -130,18 +120,14 @@
             <v-list-item-icon>
               <v-icon v-text="item.mobIcon"></v-icon>
             </v-list-item-icon>
-            <v-list-item-title
-              v-text="item.title"
-            ></v-list-item-title>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
           </v-list-item>
 
           <v-list-item href="#contact" @click="toggleDrawer()">
             <v-list-item-icon>
               <v-icon>mdi-phone</v-icon>
             </v-list-item-icon>
-            <v-list-item-title
-              >Contact</v-list-item-title
-            >
+            <v-list-item-title>Contact</v-list-item-title>
           </v-list-item>
 
           <v-list-item @click="toggleDarkMode()">
@@ -328,5 +314,17 @@ body {
 }
 .aos-init:not(.aos-animate):after {
   position: fixed;
+}
+.c-bg-dark {
+  background-color: #101820 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%232F3A3D' stroke-width='66.7' stroke-opacity='0.2' %3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+.c-bg-light {
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23101820' stroke-width='66.7' stroke-opacity='0.03' %3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+.c-bg {
+  background-attachment: fixed !important;
+  background-size: cover !important;
 }
 </style>
