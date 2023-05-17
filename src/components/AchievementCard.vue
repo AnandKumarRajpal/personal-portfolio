@@ -1,9 +1,8 @@
 <template>
   <v-card
     width="350"
-    elevation="5"
     min-height="350"
-    class="my-4 mx-2 rounded-lg d-flex flex-column"
+    class="d-flex flex-column gradient-border-color"
     rounded
   >
     <div class="d-flex align-center justify-center">
@@ -17,7 +16,7 @@
       <p>{{ description }}</p>
       <div>
         <v-divider></v-divider>
-        <p v-if="link !== null" class="mt-4 mb-0" ><a :href="link" target="_blank" style="color: rgba(255, 255, 255, 0.7)"> {{ linkTitle }} </a></p>
+        <p v-if="link !== null" class="mt-4 mb-0" ><a :href="link" target="_blank" :style="{'color': this.$vuetify.theme.dark ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'}"> {{ linkTitle }} </a></p>
         <p v-else class="mt-4 mb-0">{{ linkTitle }}</p>
       </div>
     </v-card-text>

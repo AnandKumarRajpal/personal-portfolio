@@ -2,8 +2,7 @@
   <v-card
     width="350"
     min-height="350"
-    elevation="10"
-    class="d-flex flex-column rounded-lg"
+    class="d-flex flex-column gradient-border-color"
     rounded
   >
     <v-card-title style="flex: 0 1 auto">
