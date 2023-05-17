@@ -11,7 +11,7 @@
     <!-- PageLoader end -->
 
     <!-- Navbar -->
-    <v-app-bar app id="appBarMain" class="darkLight">
+    <v-app-bar app id="appBarMain" :class="this.$vuetify.theme.dark ? 'navbar-bg-dark' : 'navbar-bg-light'" style="backdrop-filter: blur(6px);">
       <v-container>
         <v-row class="mx-0 my-0">
           <div class="d-flex align-center my-2">
@@ -159,8 +159,8 @@
       ></c-work-experience>
       <c-education data-aos="fade-up-left" data-aos-offset="250"></c-education>
       <c-projects data-aos="fade-up-right" data-aos-offset="250"></c-projects>
-      <c-achievements></c-achievements>
-      <c-contact data-aos="fade-up-left" data-aos-offset="250"></c-contact>
+      <c-achievements data-aos="fade-up-left" data-aos-offset="250"></c-achievements>
+      <c-contact data-aos="fade-up-right" data-aos-offset="250"></c-contact>
       <c-footer></c-footer>
     </v-main>
   </v-app>
@@ -311,6 +311,7 @@ export default {
 }
 body {
   overflow-x: hidden;
+  background-color: #101820;
 }
 .aos-init:not(.aos-animate):after {
   position: fixed;
@@ -326,5 +327,34 @@ body {
 .c-bg {
   background-attachment: fixed !important;
   background-size: cover !important;
+}
+
+.darkText {
+  background-image: linear-gradient(to right,#00dc82, #36e4da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-heading {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.gradient-border-color::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, rgb(0, 220, 130), rgb(54, 228, 218), rgb(22, 167, 158)) !important;
+  inset: -3px;
+  z-index: -1;
+  border-radius: 4px;
+  opacity: 1 !important;
+}
+
+.navbar-bg-dark {
+  background-color: #2F3A3EBF !important;
+}
+
+.navbar-bg-light {
+  background-color: #f5f5f5BF !important;
 }
 </style>
