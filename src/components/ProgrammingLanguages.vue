@@ -1,7 +1,7 @@
 <template>
   <div class="mt-16">
-    <p class="code-style font-weight-bold darkText--text">
-      Languages I work with:
+    <p class="code-style">
+      Technologies I work with:
     </p>
     <v-row class="mx-0 my-0">
       <v-col>
@@ -11,7 +11,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -21,7 +21,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -31,7 +31,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-divider vertical class="divider-border"></v-divider>
@@ -42,7 +42,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -52,7 +52,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -62,7 +62,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -72,7 +72,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-divider vertical class="divider-border"></v-divider>
@@ -83,7 +83,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -93,7 +93,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
       <v-col>
@@ -103,7 +103,7 @@
           height="70"
           width="70"
           contain
-          class="mx-auto pro-lang"
+          class="mx-auto"
         ></v-img>
       </v-col>
     </v-row>
@@ -117,15 +117,6 @@ export default {
 </script>
 
 <style scoped>
-.pro-lang {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  transition: 0.5s;
-}
-.pro-lang:hover {
-  filter: none;
-  -webkit-filter: grayscale(0);
-}
 .v-divider--vertical {
   border-width: 0 5px 0 0 !important;
 }

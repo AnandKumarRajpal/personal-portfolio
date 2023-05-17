@@ -2,13 +2,10 @@
   <v-container>
     <v-row class="main-container">
       <v-col class="px-0 py-0">
-        <p class="code-style darkText--text">Hello, my name is</p>
-        <h1 class="main-text">Anand Kumar</h1>
-        <p class="code-style summary darkText--text">
-          Software Development Engineer
-        </p>
-        <p class="code-style summary darkText--text">
-          Bachelors of Science in Computer Science
+        <p class="code-style">Hello, I'm</p>
+        <h1 class="main-text darkText">Anand Kumar</h1>
+        <p class="code-style summary">
+          Software Development Engineer @ Securiti.ai
         </p>
         <c-programming-languages></c-programming-languages>
       </v-col>
