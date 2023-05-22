@@ -142,6 +142,13 @@
             </v-list-item-icon>
             <v-list-item-title>Contact</v-list-item-title>
           </v-list-item>
+          
+          <v-list-item href="/AnandKumar-Resume.pdf" target="_blank">
+            <v-list-item-icon>
+              <v-icon>mdi-file</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Resume</v-list-item-title>
+          </v-list-item>
 
           <v-list-item @click="toggleDarkMode()">
             <v-list-item-icon>
