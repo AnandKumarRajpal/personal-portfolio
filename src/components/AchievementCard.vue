@@ -1,12 +1,13 @@
 <template>
   <v-card
-    width="350"
-    min-height="350"
-    class="d-flex flex-column gradient-border-color"
-    rounded
+    width="320"
+    min-height="400"
+    class="d-flex flex-column"
+    rounded="lg"
+    elevation="5"
   >
     <div class="d-flex align-center justify-center">
-      <img :src="require('@/' + iconLink)" height="100" alt="" class="my-4" :style="noFilter ? '' : $vuetify.theme.dark ? '' : 'filter: invert(1);'" />
+      <img :src="require('@/' + iconLink)" height="100" alt="" class="my-4" :class="{ 'filter': !$vuetify.theme.dark && !noFilter }" />
     </div>
     <v-card-title style="word-break: break-word">{{ title }}</v-card-title>
     <v-card-text
@@ -41,4 +42,7 @@ export default {
 </script>
 
 <style>
+.filter {
+  filter: invert(0.54);
+}
 </style>

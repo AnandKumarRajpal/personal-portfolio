@@ -11,7 +11,6 @@
             :key="project.title"
             v-for="project in projectsList"
             cols="12"
-            xl="3"
             sm="6"
             lg="4"
           >

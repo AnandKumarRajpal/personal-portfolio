@@ -10,10 +10,10 @@ export default new Vuetify({
       dark: {
         background: '#101820',
         darkLight: "#2F3A3E",
-        primary: "#00DC82"
+        primary: "#2dd4bf"
       },
       light: {
-        primary: "#00DC82"
+        primary: "#14b8a5"
       }
     },
   },

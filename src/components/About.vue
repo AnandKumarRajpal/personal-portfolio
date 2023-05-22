@@ -6,13 +6,6 @@
           <p class="code-style darkText section-heading my-0">01 - About Me</p>
           <v-divider class="ml-4"></v-divider>
         </v-row>
-        <v-img
-          src="@/assets/avatar.svg"
-          height="250"
-          width="250"
-          contain
-          class="mx-auto mb-8"
-        ></v-img>
         <p>
           Hello! I'm Anand Kumar, a Computer Science graduate from
           <a href="https://habib.edu.pk/" target="_blank" class="darkText link"

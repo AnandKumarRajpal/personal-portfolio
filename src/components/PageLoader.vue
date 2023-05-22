@@ -41,7 +41,7 @@ export default {
     this.vivus = new Vivus(
       "my-svg-1",
       {
-        duration: 200,
+        duration: 150,
       },
       (myVivus) => {
         if (myVivus.getStatus() === "end") {

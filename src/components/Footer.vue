@@ -1,6 +1,6 @@
 <template>
-  <v-footer padless elevation="5" style="margin-top: 5rem">
-    <v-card flat tile class="text-center darkLight" width="100%">
+  <v-footer padless elevation="5" style="margin-top: 5rem" class="navbar-bg">
+    <v-card flat tile class="text-center" width="100%" style="background-color: transparent;">
       <v-divider></v-divider>
       <v-card-text>
         Copyright &copy; {{ new Date().getFullYear() }} — Anand Kumar

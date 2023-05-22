@@ -3,8 +3,8 @@
     <p class="code-style">
       Technologies I work with:
     </p>
-    <v-row class="mx-0 my-0">
-      <v-col>
+    <v-row class="mx-0 my-0 align-center justify-center">
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/html.svg"
           title="HTML 5"
@@ -14,7 +14,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/css.svg"
           title="CSS 3"
@@ -24,7 +24,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/js.svg"
           title="JavaScript"
@@ -34,8 +34,8 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-divider vertical class="divider-border"></v-divider>
-      <v-col>
+      <v-divider vertical class="divider-border mx-2"></v-divider>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/python.svg"
           title="Python3"
@@ -45,7 +45,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/c.svg"
           title="C"
@@ -55,7 +55,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/cpp.svg"
           title="C++"
@@ -65,7 +65,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/php.svg"
           title="PHP"
@@ -75,8 +75,8 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-divider vertical class="divider-border"></v-divider>
-      <v-col>
+      <v-divider vertical class="divider-border mx-2"></v-divider>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/vuejs.svg"
           title="VueJS"
@@ -86,7 +86,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/flutter.svg"
           title="Flutter"
@@ -96,7 +96,7 @@
           class="mx-auto"
         ></v-img>
       </v-col>
-      <v-col>
+      <v-col class="flex-grow-0">
         <v-img
           src="@/assets/wp.svg"
           title="WordPress"

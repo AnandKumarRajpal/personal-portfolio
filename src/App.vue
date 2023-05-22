@@ -1,17 +1,30 @@
 <template>
-  <v-app
-    dark
-    class="c-bg"
-    :class="this.$vuetify.theme.dark ? 'c-bg-dark' : 'c-bg-light'"
-  >
+  <v-app dark class="c-bg">
     <!-- PageLoader -->
     <transition name="custom-fade" mode="out-in">
       <c-page-loader v-if="isLoading"></c-page-loader>
     </transition>
     <!-- PageLoader end -->
 
+    <div
+      class="d-flex justify-center w-100 h-100 bg bg-top"
+      :style="{ backgroundImage: 'url(' + require('@/assets/bg.png') + ')' }"
+    ></div>
+
+    <div
+      class="d-flex justify-center w-100 h-100 bg align-end justify-center"
+      style="overflow: hidden"
+    >
+      <img src="@/assets/bg.png" class="bg-bottom" />
+    </div>
+
     <!-- Navbar -->
-    <v-app-bar app id="appBarMain" :class="this.$vuetify.theme.dark ? 'navbar-bg-dark' : 'navbar-bg-light'" style="backdrop-filter: blur(6px);">
+    <v-app-bar
+      app
+      id="appBarMain"
+      class="navbar-bg"
+      style="backdrop-filter: blur(6px)"
+    >
       <v-container>
         <v-row class="mx-0 my-0">
           <div class="d-flex align-center my-2">
@@ -159,7 +172,10 @@
       ></c-work-experience>
       <c-education data-aos="fade-up-left" data-aos-offset="250"></c-education>
       <c-projects data-aos="fade-up-right" data-aos-offset="250"></c-projects>
-      <c-achievements data-aos="fade-up-left" data-aos-offset="250"></c-achievements>
+      <c-achievements
+        data-aos="fade-up-left"
+        data-aos-offset="250"
+      ></c-achievements>
       <c-contact data-aos="fade-up-right" data-aos-offset="250"></c-contact>
       <c-footer></c-footer>
     </v-main>
@@ -272,8 +288,8 @@ export default {
 }
 
 :root {
-  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
+  --font-sans: "Manrope", "Calibre", "Inter", "San Francisco", "SF Pro Text",
+    -apple-system, system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
@@ -316,23 +332,25 @@ body {
 .aos-init:not(.aos-animate):after {
   position: fixed;
 }
-.c-bg-dark {
-  background-color: #101820 !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%232F3A3D' stroke-width='66.7' stroke-opacity='0.2' %3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
+.theme--dark.c-bg {
+  background-color: #111827 !important;
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%232F3A3D' stroke-width='66.7' stroke-opacity='0.2' %3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23101820' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important; */
 }
-.c-bg-light {
-  background-color: #ffffff !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23101820' stroke-width='66.7' stroke-opacity='0.03' %3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
+.theme--light.c-bg {
+  background-color: #f5f5f5 !important;
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23101820' stroke-width='66.7' stroke-opacity='0.03' %3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important; */
 }
 .c-bg {
   background-attachment: fixed !important;
   background-size: cover !important;
 }
 
-.darkText {
-  background-image: linear-gradient(to right,#00dc82, #36e4da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.theme--dark .darkText {
+  color: #2dd4bf;
+}
+
+.theme--light .darkText {
+  color: #14b8a5;
 }
 
 .section-heading {
@@ -343,18 +361,69 @@ body {
 .gradient-border-color::before {
   content: "";
   position: absolute;
-  background: linear-gradient(to right, rgb(0, 220, 130), rgb(54, 228, 218), rgb(22, 167, 158)) !important;
+  background: linear-gradient(
+    to right,
+    rgb(0, 220, 130),
+    rgb(54, 228, 218),
+    rgb(22, 167, 158)
+  ) !important;
   inset: -3px;
   z-index: -1;
   border-radius: 4px;
   opacity: 1 !important;
 }
 
-.navbar-bg-dark {
-  background-color: #2F3A3EBF !important;
+.theme--dark .navbar-bg {
+  background-color: #11182780 !important;
 }
 
-.navbar-bg-light {
-  background-color: #f5f5f5BF !important;
+.theme--light .navbar-bg {
+  background-color: #ffffff80 !important;
+}
+
+.theme--light.v-sheet {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.theme--light.v-application {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.v-application {
+  font-family: var(--font-sans) !important;
+}
+
+@media (min-width: 1904px) {
+  .container {
+    max-width: 1085px;
+  }
+}
+
+@media (min-width: 1264px) {
+  .container {
+    max-width: 1085px;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.bg {
+  position: absolute;
+  background-size: auto;
+}
+
+.bg-top {
+  background-position: top;
+  transform: translateY(-18rem);
+}
+
+.bg-bottom {
+  transform: translateY(18rem);
 }
 </style>

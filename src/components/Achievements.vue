@@ -11,7 +11,6 @@
             :key="item.id"
             v-for="item in achievements"
             cols="12"
-            xl="3"
             sm="6"
             lg="4"
           >

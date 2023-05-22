@@ -1,9 +1,10 @@
 <template>
   <v-card
-    width="350"
-    min-height="350"
-    class="d-flex flex-column gradient-border-color"
-    rounded
+    width="320"
+    min-height="400"
+    class="d-flex flex-column"
+    rounded="lg"
+    elevation="5"
   >
     <v-card-title style="flex: 0 1 auto">
       <v-row class="mx-0 my-0 align-center justify-center">
