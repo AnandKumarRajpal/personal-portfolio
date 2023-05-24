@@ -77,7 +77,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #101820; /* Black background with opacity */
+  background-color: #111827; /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
