@@ -142,7 +142,7 @@
             </v-list-item-icon>
             <v-list-item-title>Contact</v-list-item-title>
           </v-list-item>
-          
+
           <v-list-item href="/AnandKumar-Resume.pdf" target="_blank">
             <v-list-item-icon>
               <v-icon>mdi-file</v-icon>
@@ -183,7 +183,11 @@
         data-aos="fade-up-left"
         data-aos-offset="250"
       ></c-achievements>
-      <c-contact data-aos="fade-up-right" data-aos-offset="250"></c-contact>
+      <c-community-projects
+        data-aos="fade-up-right"
+        data-aos-offset="250"
+      ></c-community-projects>
+      <c-contact data-aos="fade-up-left" data-aos-offset="250"></c-contact>
       <c-footer></c-footer>
     </v-main>
   </v-app>
@@ -199,6 +203,7 @@ import Education from "./components/Education.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 import PageLoader from "./components/PageLoader.vue";
+import CommunityProjects from "./components/CommunityProjects.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -218,6 +223,7 @@ export default {
     cContact: Contact,
     cFooter: Footer,
     cPageLoader: PageLoader,
+    cCommunityProjects: CommunityProjects,
   },
 
   data: () => ({
@@ -247,6 +253,12 @@ export default {
         title: "Achievements",
         icon: "trophy",
         mobIcon: "mdi-trophy",
+      },
+      {
+        link: "#community-projects",
+        title: "Community Projects",
+        icon: "seedling",
+        mobIcon: "mdi-sprout",
       },
     ],
     on: null,
@@ -362,7 +374,6 @@ body {
 
 .section-heading {
   font-weight: bold;
-  font-size: 1.5rem;
 }
 
 .gradient-border-color::before {
@@ -432,5 +443,10 @@ body {
 
 .bg-bottom {
   transform: translateY(18rem);
+}
+
+*,
+html {
+  scroll-behavior: smooth !important;
 }
 </style>

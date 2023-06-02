@@ -56,7 +56,7 @@ export default {
 
 .main-text {
   font-family: var(--font-sans);
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 800;
 }
 
