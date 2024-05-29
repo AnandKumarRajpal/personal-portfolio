@@ -12,6 +12,10 @@
           background-color="darkLight"
         >
           <v-tab class="justify-start">
+            <img src="@/assets/uoc.png" height="20" class="mr-2" alt="" />
+            University of Calgary
+          </v-tab>
+          <v-tab class="justify-start">
             <img src="@/assets/hu.png" height="20" class="mr-2" alt="" />
             Habib University
           </v-tab>
@@ -24,6 +28,15 @@
             St. Patrick's High School
           </v-tab>
 
+          <v-tab-item>
+            <v-card flat class="darkLight">
+              <v-card-text class="card-text">
+                <p>Master of Science (MSc) in Computer Science</p>
+                <p class="code-style">2024 - 2026</p>
+                <p>Calgary, Canada</p>
+              </v-card-text>
+            </v-card>
+          </v-tab-item>
           <v-tab-item>
             <v-card flat class="darkLight">
               <v-card-text class="card-text">

@@ -15,7 +15,7 @@
             <h1 class="main-text">
               Hello, I'm <br />
               <span class="darkText">Anand Kumar</span> <br />
-              Software Engineer @ Securiti.ai
+              MSc in CS @ University of Calgary
             </h1>
           </v-col>
           <v-col class="flex-grow-0 d-none d-sm-flex">
@@ -56,7 +56,7 @@ export default {
 
 .main-text {
   font-family: var(--font-sans);
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-weight: 800;
 }
 
