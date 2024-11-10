@@ -44,9 +44,9 @@ export default {
         "https://twitter.com/rajpal_anand",
         "https://www.linkedin.com/in/anand-kumar-rajpal/",
         "https://github.com/AnandKumarRajpal/",
-        "https://wa.me/923462490616",
-        "mailto:ak05173@st.habib.edu.pk",
-        "tel:+923462490616",
+        "https://wa.me/14033974960",
+        "mailto:anandrajpal123@gmail.com",
+        "tel:+14033974960",
       ],
     };
   },

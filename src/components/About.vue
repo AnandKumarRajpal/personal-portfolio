@@ -7,16 +7,20 @@
           <v-divider class="ml-4"></v-divider>
         </v-row>
         <p>
-          Hello! I'm Anand Kumar, a Computer Science graduate from
-          <a href="https://habib.edu.pk/" target="_blank" class="darkText link"
-            >Habib University, Karachi</a
-          >. I've always been a great problem solver, and a technophile obsessed
-          with the latest devices. I am passionate about front-end development,
-          app development, artificial intelligence and building products that
-          can help the marginalized people of our society. Today, I'm working as
-          an associate software engineer for
-          <a class="darkText link" target="_blank" href="https://securiti.ai/">Securiti</a
-          >, and I get to show off all these elements of who I am.
+          Hello, I'm Anand Kumar, an MSc. CS (Thesis) student at the <a href="https://ucalgary.ca/" target="_blank" class="darkText link">
+            University of Calgary</a>.
+        </p>
+        <p>
+          I am a passionate problem solver 💡 and a technophile with a keen interest in the latest technologies 🚀
+        </p>
+        <p>
+          I'm particularly interested in deep learning and full-stack development 👨‍💻
+        </p>
+        <p>
+          I have been working as a Software Engineer for the past 2 years, where I've had the privilege of showcasing my skills and expertise in developing innovative products 🌟
+        </p>
+        <p>
+          I believe in using my knowledge and experience to make a positive impact on society 🌱
         </p>
       </v-col>
     </v-row>

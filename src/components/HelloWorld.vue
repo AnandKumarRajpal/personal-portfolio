@@ -11,18 +11,26 @@
               contain
             ></v-img>
           </v-col>
-          <v-col>
+          <v-col class="text-center text-md-left">
             <h1 class="main-text">
               Hello, I'm <br />
               <span class="darkText">Anand Kumar</span> <br />
-              MSc in CS @ University of Calgary
+              MSc. CS @ University of Calgary
             </h1>
+            <v-btn
+              class="gradient-border-color mt-4 darkLight"
+              href="/AnandKumar-Resume.pdf"
+              target="_blank"
+            >
+              <v-icon class="mr-2">mdi-download</v-icon>
+              Resume
+            </v-btn>
           </v-col>
           <v-col class="flex-grow-0 d-none d-sm-flex">
             <v-img
               src="@/assets/avatar.png"
-              height="250"
-              width="250"
+              height="400"
+              width="400"
               contain
             ></v-img>
           </v-col>
@@ -63,7 +71,6 @@ export default {
 @media (max-width: 600px) {
   .main-text {
     font-size: 2.25rem;
-    text-align: center;
   }
   .main-container {
     margin: 3rem 0 0 0 !important;

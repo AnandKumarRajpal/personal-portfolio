@@ -83,11 +83,6 @@
               <span class="ml-2">Contact</span>
             </v-btn>
 
-            <v-btn href="/AnandKumar-Resume.pdf" target="_blank" text>
-              <span><i class="fa-solid fa-file"></i></span>
-              <span class="ml-2">Resume</span>
-            </v-btn>
-
             <v-btn icon @click="toggleDarkMode()">
               <transition name="slide-fade" mode="out-in">
                 <span v-if="darkMode" key="1"
@@ -387,7 +382,6 @@ body {
   ) !important;
   inset: -3px;
   z-index: -1;
-  border-radius: 4px;
   opacity: 1 !important;
 }
 
