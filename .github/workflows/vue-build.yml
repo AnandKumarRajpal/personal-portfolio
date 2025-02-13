@@ -3,6 +3,7 @@ on: [push]
 jobs:
   build_vue:
     env:
+      VUE_APP_FB_API_KEY: ${{ secrets.VUE_APP_FB_API_KEY }}
       VUE_APP_FB_DOMAIN: ${{ secrets.VUE_APP_FB_DOMAIN }}
       VUE_APP_FB_DB_URL: ${{ secrets.VUE_APP_FB_DB_URL }}
       VUE_APP_FB_PROJECT_ID: ${{ secrets.VUE_APP_FB_PROJECT_ID }}
