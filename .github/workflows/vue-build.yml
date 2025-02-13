@@ -2,6 +2,14 @@ name: Build Vue
 on: [push]
 jobs:
   build_vue:
+    env:
+      VUE_APP_FB_DOMAIN: ${{ secrets.VUE_APP_FB_DOMAIN }}
+      VUE_APP_FB_DB_URL: ${{ secrets.VUE_APP_FB_DB_URL }}
+      VUE_APP_FB_PROJECT_ID: ${{ secrets.VUE_APP_FB_PROJECT_ID }}
+      VUE_APP_FB_STORAGE_BUCKET: ${{ secrets.VUE_APP_FB_STORAGE_BUCKET }}
+      VUE_APP_FB_SENDER_ID: ${{ secrets.VUE_APP_FB_SENDER_ID }}
+      VUE_APP_FB_APP_ID: ${{ secrets.VUE_APP_FB_APP_ID }}
+      VUE_APP_FB_MEASUREMENT_ID: ${{ secrets.VUE_APP_FB_MEASUREMENT_ID }}
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
