@@ -19,5 +19,5 @@ jobs:
       uses: xRealNeon/VuePagesAction@1.0.1
       with:
         username: 'AnandKumarRajpal'
-        reponame: 'personal-portfolio'
+        reponame: 'anandkumarrajpal.github.io'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
