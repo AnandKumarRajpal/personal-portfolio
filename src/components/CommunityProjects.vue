@@ -3,7 +3,7 @@
         <v-row class="main-container">
             <v-col class="px-0 py-0">
                 <v-row class="mx-0 mb-4 my-0 align-center">
-                    <p class="code-style darkText section-heading my-0">02.05 - Community Projects</p>
+                    <p class="code-style darkText section-heading my-0">02.05 - Community Engagement</p>
                     <v-divider class="ml-4"></v-divider>
                 </v-row>
                 <v-row class="mx-0 mb-4 my-0 align-center">
@@ -12,6 +12,11 @@
                 </v-row>
                 <v-card elevation="10">
                     <v-tabs :vertical="!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)" background-color="darkLight">
+                        <v-tab class="justify-start">
+                            <img src="@/assets/uoc.png" height="20" class="mr-2" alt="" />
+                            University of Calgary
+                        </v-tab>
+
                         <v-tab class="justify-start">
                             <img src="@/assets/hu.png" height="20" class="mr-2" alt="" />
                             Habib University
@@ -25,11 +30,24 @@
                         <v-tab-item>
                             <v-card flat class="darkLight">
                                 <v-card-text class="card-text">
+                                    <p>Teaching Assistant @ University of Calgary</p>
+                                    <ul class="code-style">
+                                        <li>Actionable Visualization and Analytics (Winter 2025)</li>
+                                        <li>Artificial Intelligence (Fall 2024)</li>
+                                    </ul>
+                                    <p class="mt-4">Assisted students by addressing their queries related to assignments, labs, and lectures. Also prepared and delivered tutorials to enhance their understanding of key concepts.</p>
+                                </v-card-text>
+                            </v-card>
+                        </v-tab-item>
+
+                        <v-tab-item>
+                            <v-card flat class="darkLight">
+                                <v-card-text class="card-text">
                                     <p>Teaching Assistant @ Habib University</p>
                                     <ul class="code-style">
-                                        <li>Computer Architecture (Spring 2022)</li>
-                                        <li>Computer Architecture (Spring 2021)</li>
-                                        <li>Data Structures & Algorithms (Spring 2020)</li>
+                                        <li>Computer Architecture (Winter 2022)</li>
+                                        <li>Computer Architecture (Winter 2021)</li>
+                                        <li>Data Structures & Algorithms (Winter 2020)</li>
                                     </ul>
                                     <p class="mt-4">Assisted students during labs, and helped them to solve their queries on assignments, labs, and lectures.</p>
                                 </v-card-text>
@@ -70,7 +88,7 @@
                             <v-card flat class="darkLight">
                                 <v-card-text class="card-text">
                                     <p>IT Consultant @ Saaya Pakistan</p>
-                                    <p class="code-style">August 2020 - Present</p>
+                                    <p class="code-style">August 2020 - May 2024</p>
                                     <ul class="mb-4">
                                         <li>Voluntarily maintain Saaya Pakistan's (NGO) website including optimizing it, updating the content, and continuously adding required features.</li>
                                     </ul>

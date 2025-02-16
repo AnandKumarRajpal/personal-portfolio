@@ -31,8 +31,8 @@
           <v-tab-item>
             <v-card flat class="darkLight">
               <v-card-text class="card-text">
-                <p>Master of Science (MSc) in Computer Science</p>
-                <p class="code-style">2024 - 2026</p>
+                <p>Master of Science (MSc.) in Computer Science (Thesis)</p>
+                <p class="code-style">2024 - Present</p>
                 <p>Calgary, Canada</p>
               </v-card-text>
             </v-card>
